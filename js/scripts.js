@@ -30,5 +30,7 @@ $(document).ready(function() {
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
+
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + "</span></li>");
   });
 });
