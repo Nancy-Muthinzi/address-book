@@ -4,6 +4,18 @@ function Contact(first, last) {
   this.lastName = last;
 }
 
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+}
+
+$(".contact").last().click(function() {
+    $("#show-contact").show();
+    $("#show-contact h2").text(newContact.firstName);
+    $(".first-name").text(newContact.firstName);
+    $(".last-name").text(newContact.lastName);
+  });
+
+
 // user interface logic
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
